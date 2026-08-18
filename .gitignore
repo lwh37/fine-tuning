@@ -6,10 +6,10 @@ __pycache__/
 .vscode/
 
 # Real datasets, model artifacts and archives are intentionally excluded.
-data/raw/
-data/private/
-outputs/
-checkpoints/
+**/data/raw/
+**/data/private/
+**/outputs/
+**/checkpoints/
 *.xlsx
 *.xls
 *.csv
