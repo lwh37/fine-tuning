@@ -1,0 +1,8 @@
+{
+  "textcnn_threshold": 0.6,
+  "safe_label": "safe",
+  "risk_label": "risk",
+  "route_high_score_to_llm": true,
+  "segment_aggregation": "max",
+  "notes": "Example only. Recalibrate on authorized target traffic."
+}

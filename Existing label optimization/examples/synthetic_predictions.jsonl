@@ -1,0 +1,6 @@
+{"id":"demo-1","text":"请问明天下午方便看房吗","truth":"safe","textcnn_score":0.08,"llm_prediction":"safe"}
+{"id":"demo-2","text":"资料已经收到，谢谢你的耐心说明","truth":"safe","textcnn_score":0.67,"llm_prediction":"safe"}
+{"id":"demo-3","text":"你根本不会沟通，只会乱说","truth":"risk","textcnn_score":0.82,"llm_prediction":"risk"}
+{"id":"demo-4","text":"别再来烦我，你的态度太差了","truth":"risk","textcnn_score":0.55,"llm_prediction":"risk"}
+{"id":"demo-5","text":"这个户型看起来很一般","truth":"safe","textcnn_score":0.78,"llm_prediction":"risk"}
+{"id":"demo-6","text":"拿别人的困难开玩笑很不友好","truth":"risk","textcnn_score":0.91,"llm_prediction":"safe"}
