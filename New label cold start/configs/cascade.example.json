@@ -1,0 +1,8 @@
+{
+  "front_model": "ModernBERT",
+  "review_model": "Qwen3-Base-4B-LoRA",
+  "risk_score_threshold": 0.85,
+  "safe_label": "safe",
+  "risk_label": "risk",
+  "review_output_labels": ["safe", "risk"]
+}
