@@ -1,0 +1,8 @@
+{"id": 1, "truth": "safe", "front_score": 0.08, "llm_prediction": "safe"}
+{"id": 2, "truth": "safe", "front_score": 0.31, "llm_prediction": "safe"}
+{"id": 3, "truth": "safe", "front_score": 0.88, "llm_prediction": "safe"}
+{"id": 4, "truth": "safe", "front_score": 0.91, "llm_prediction": "risk"}
+{"id": 5, "truth": "risk", "front_score": 0.96, "llm_prediction": "risk"}
+{"id": 6, "truth": "risk", "front_score": 0.93, "llm_prediction": "risk"}
+{"id": 7, "truth": "risk", "front_score": 0.89, "llm_prediction": "safe"}
+{"id": 8, "truth": "risk", "front_score": 0.72, "llm_prediction": "risk"}
