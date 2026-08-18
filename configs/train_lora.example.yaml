@@ -1,0 +1,25 @@
+model: Qwen3-Base-4B
+template: base
+max_sequence_length: 4096
+
+resources:
+  gpu: 1
+  gpu_type: L40S
+  cpu: 4
+  memory_gb: 60
+
+training:
+  epochs: 5
+  per_device_batch_size: 4
+  gradient_accumulation_steps: 2
+  learning_rate: 0.00005
+  warmup_steps: 3000
+  weight_decay: 0
+  max_grad_norm: 1
+  quantization: false
+  unsloth: true
+
+lora:
+  rank: 8
+  alpha: 32
+  dropout: 0.1

@@ -1,0 +1,24 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+.vscode/
+
+# Real datasets, model artifacts and archives are intentionally excluded.
+data/raw/
+data/private/
+outputs/
+checkpoints/
+*.xlsx
+*.xls
+*.csv
+*.tsv
+*.tar
+*.tar.gz
+*.zip
+*.bin
+*.ckpt*
+*.safetensors
+*.pt
+*.pth
