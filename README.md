@@ -8,7 +8,7 @@
 
 | 子项目 | 主要问题 | 技术方案 | 可核验结果 |
 | --- | --- | --- | --- |
-| [General non-review fine-tuning](General%20non-review%20fine-tuning/README.md) | 人工复核量大、不同场景字段结构不统一 | Qwen3-Base-4B + LoRA SFT；逐字段独立判断 + OR 聚合 | 10 万条黑白均衡 SFT 数据；项目总结口径为免审准确率 94%，提升 4pp |
+| [General non-review fine-tuning](General%20non-review%20fine-tuning/README.md) | 人工复核量大、不同场景字段结构不统一 | Qwen3-Base-4B + LoRA SFT；逐字段独立判断 + OR 聚合 | 10 万条黑白均衡 SFT 数据；项目总结口径为黑样本召回率 94%，提升 4pp |
 | [New label cold start](New%20label%20cold%20start/README.md) | 新风险标签缺少识别能力、单模型难兼顾召回和误伤 | ModernBERT 初筛 + Qwen3 大模型复核 | 2,836 条评测集；准确率 76.23% → 98.91%；全链路召回率 99.3% |
 | [Existing label optimization](Existing%20label%20optimization/README.md) | 存量标签分布漂移与房产场景辱骂/不友好漏检 | TextCNN 初筛 + Qwen3 大模型复核 + Bad Case 定向回流 | 98,144 条 TextCNN 训练样本；24,532 条 Qwen SFT 数据；召回率 72.7% → 87.3%；误伤率 0.2% |
 
