@@ -1,6 +1,6 @@
 # 内容安全大模型微调与级联审核算法优化
 
-**Qwen3-Base-4B + LoRA SFT / ModernBERT / TextCNN**
+**Qwen3-Base-4B + LoRA SFT / GRPO / ModernBERT / TextCNN**
 
 面向内容审核中的跨场景字段差异、新标签冷启动和存量标签持续优化，构建“轻量模型高召回初筛 → 大模型语义复核 → Bad Case 回流”的数据与算法闭环。本仓库为公开安全版，只包含方法、统计、脱敏脚本、配置和合成样本，不分发真实审核日志或生产模型。
 
@@ -10,7 +10,7 @@
 | --- | --- | --- | --- |
 | [General non-review fine-tuning](General%20non-review%20fine-tuning/README.md) | 人工复核量大、不同场景字段结构不统一 | Qwen3-Base-4B + LoRA SFT；逐字段判断 + OR 聚合 | 10 万条黑白均衡 SFT 数据；项目总结口径为黑样本召回率 94%，提升 4pp |
 | [New label cold start](New%20label%20cold%20start/README.md) | 新风险标签缺少识别能力、单模型难兼顾召回和误伤 | ModernBERT 初筛 + Qwen3 大模型复核 | 2,836 条评测集；准确率 76.23% → 98.91%；全链路召回率 99.3% |
-| [Existing label optimization](Existing%20label%20optimization/README.md) | 存量标签分布漂移与房产场景辱骂/不友好漏检 | TextCNN 初筛 + Qwen3 大模型复核 + Bad Case 定向回流 | 98,144 条 TextCNN 训练样本；24,532 条 Qwen SFT 数据；召回率 72.7% → 87.3%；误伤率 0.2% |
+| [Existing label optimization](Existing%20label%20optimization/README.md) | 存量标签分布漂移与房产场景辱骂/不友好漏检 | TextCNN 初筛 + Qwen3 LoRA SFT + Hard Case Mining + GRPO | 实习迭代切片 Recall 72.7% → 87.3%；后续 sealed Test 上级联 Recall 76.50% → 88.60%，其中 GRPO 独立贡献 +0.83pp |
 
 ## 统一技术链路
 
@@ -23,7 +23,8 @@ flowchart LR
     D -->|低风险| F[直接通过或按业务策略处理]
     E --> G[最终审核结果]
     G --> H[切片评测与 Bad Case]
-    H --> B
+    H --> I[Hard Case SFT / GRPO 后训练]
+    I --> B
 ```
 
 ## 公开边界

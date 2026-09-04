@@ -1,0 +1,12 @@
+{"sample_id":"fn-1","text":"你这种沟通方式让人很不舒服","silver_label":"risk","risk_subtype":"unfriendly","bucket":"qwen_fn"}
+{"sample_id":"fn-2","text":"再这样纠缠会让你付出代价","silver_label":"risk","risk_subtype":"threat","bucket":"qwen_fn"}
+{"sample_id":"fn-3","text":"你只会把问题推给别人","silver_label":"risk","risk_subtype":"unfriendly","bucket":"qwen_fn"}
+{"sample_id":"fp-1","text":"这个户型看起来不太友好","silver_label":"safe","risk_subtype":null,"bucket":"qwen_fp"}
+{"sample_id":"fp-2","text":"软件提示连接已被杀掉","silver_label":"safe","risk_subtype":null,"bucket":"qwen_fp"}
+{"sample_id":"fp-3","text":"天气热得让人难受","silver_label":"safe","risk_subtype":null,"bucket":"qwen_fp"}
+{"sample_id":"bd-1","text":"垃圾桶放在门口了","silver_label":"safe","risk_subtype":null,"bucket":"boundary_replay"}
+{"sample_id":"bd-2","text":"杀毒软件已经更新完成","silver_label":"safe","risk_subtype":null,"bucket":"boundary_replay"}
+{"sample_id":"bd-3","text":"卫生间有一股难闻的气味","silver_label":"safe","risk_subtype":null,"bucket":"boundary_replay"}
+{"sample_id":"rp-1","text":"你的态度真的很差","silver_label":"risk","risk_subtype":"unfriendly","bucket":"positive_replay"}
+{"sample_id":"rp-2","text":"别再来烦我","silver_label":"risk","risk_subtype":"unfriendly","bucket":"positive_replay"}
+{"sample_id":"rp-3","text":"我会让你以后都别想好过","silver_label":"risk","risk_subtype":"threat","bucket":"positive_replay"}

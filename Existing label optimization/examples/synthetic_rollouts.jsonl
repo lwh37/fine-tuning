@@ -1,0 +1,4 @@
+{"sample_id":"fn-1","binary_label":1,"bucket":"qwen_fn","responses":["无风险","不友好","无风险","不友好","无风险","不友好","无风险","不友好"]}
+{"sample_id":"fn-2","binary_label":1,"bucket":"qwen_fn","responses":["无风险","无风险","无风险","无风险","无风险","无风险","无风险","无风险"]}
+{"sample_id":"bd-1","binary_label":0,"bucket":"boundary_replay","responses":["无风险","无风险","无风险","无风险","无风险","无风险","无风险","无风险"]}
+{"sample_id":"fp-1","binary_label":0,"bucket":"qwen_fp","responses":["不友好","无风险","不友好","无风险","不友好","无风险","不友好","无风险"]}

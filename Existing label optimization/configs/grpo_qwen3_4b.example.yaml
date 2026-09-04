@@ -1,0 +1,26 @@
+# Public-safe record of the selected E2 Vanilla GRPO setup.
+# Paths are intentionally omitted; pass them through scripts/train_grpo.py.
+algorithm: grpo
+policy_init: base_plus_frozen_e1_plus_zero_init_e2_lora
+reference: base_plus_frozen_e1
+trainable_adapter: e2_only
+group_size: 8
+temperature: 0.9
+top_p: 1.0
+max_prompt_length: 1024
+max_completion_length: 10
+epochs: 1
+learning_rate: 1.0e-6
+lr_scheduler: cosine
+warmup_ratio: 0.05
+kl_beta: 0.01
+clip_epsilon: 0.2
+reward: uniform_binary_plus1_minus1
+invalid_reward: -1
+reward_scaling: group
+lora_rank: 8
+lora_alpha: 32
+lora_dropout: 0.1
+precision: bf16
+seed: 20260830
+gpus: 2
